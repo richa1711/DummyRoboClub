@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+    
+</head>
+<body>
+    
+    <header>
+        <a href="https://www.iitk.ac.in/new/robotics-club" class="b">Robotics Club IIT Kanpur</a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home </a>
+                <a href="index2.html"> Projects</a>
+                <a href="#"> Events</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+       <!-- <video class="video-slide .active" src="2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="1.mp4" autoplay muted loop></video>*/
+       -->
+
+        <div class="content">
+            <h1>Robotics<br> <span>Club</span></h1>
+            <p>Robotics club at IIT Kanpur is an undergraduate organization that provides students with the resources to develop robots. The Club offers indispensible guidance,workshops and tutorials along with tools, equipments, components and workspace
+            <br>
+            <br>
+                 Have a look on the project section too
+            </p>
+            <button type="">Created by Richa Sachan</button>
+
+        </div>
+        <div class="icons">
+            <a href="https://www.facebook.com/roboclubiitkanpur/"><i class="fab fa-facebook-f"></i> </a>
+            <a href="https://www.instagram.com/iit.kanpur/"><i class="fab fa-instagram"></i> </a>
+            <a href="https://twitter.com/IITKanpur"><i class="fab fa-twitter"></i> </a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script>
+        // javascript for video slider navigation
+       const btns=document.querySelectorAll('.nav-btn');
+       const slides=document.querySelectorAll('.video-slide');
+
+       var sliderNav=function(manual){
+           btns.forEach((btn)=>{
+            btn.classList.remove('.active');
+           });
+
+           slides.forEach((slide)=>{
+            slide.classList.remove('.active');
+           });
+
+          btns[manual].classList.add('.active');
+          slides[manual].classList.add('.active');
+
+       }
+       btns.forEach((btn,i)=>{
+            
+        btn.addEventListener('click',()=> {
+            sliderNav(i);
+           });
+
+       });
+
+    </script>
+</body>
+</html>
